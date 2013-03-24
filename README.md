@@ -1,5 +1,6 @@
-An animation library designed to let you create short, semantic
-presentations within HTML pages akin to interactive GIF images.
+[Animative](http://animative.kyd.com.au/) is an animation library
+that creates short, semantic presentations within HTML pages, a little
+like an interactive GIF.
 
 Have you ever wanted to add a GIF to your post to illustrate a point,
 but wanted to include text or annotations? Animative is probably what
@@ -22,6 +23,8 @@ Usage
 
 Animative is best used with a combination of graphics and text, although
 you could use either or both.
+
+For examples, check out the [demos & usage](http://animative.kyd.com.au/) page.
 
 Options
 =======
@@ -53,6 +56,7 @@ animation
 The type of animation to perform between frames.
 
 Options are:
+
 * fade (default)
 * slide (slides down over the previous slide.
 * none (No transition, a clean cut over)
