@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+		<script type="text/javascript" src="../animative.js"></script>
+		<style type="text/css">
+			li{
+				background:#F9F9F9;
+				font-family:"Droid Sans";
+				text-align:center;
+				padding-top:60px;
+				text-shadow:0 1px 0 rgba(255,255,255,.5);
+				position:relative;
+			}
+			li p{
+				position:absolute;
+				left:0;
+				right:0;
+				bottom:3em;
+			}
+		</style>
+	</head>
+	<body>
+		<ol class="animative" style="width:400px;height:300px;" data-animation="slide"  data-interval="500"  data-transition-duration="1000">
+			<li><h3>Default State</h3><img src="images/1.png" alt=""></li>
+			<li><h3>state_enabled</h3><img src="images/2.png" alt=""></li>
+			<li><h3>state_pressed</h3><img src="images/3.png" alt=""></li>
+		</ol>
+	</body>
+</html>
