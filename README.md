@@ -19,7 +19,6 @@ CSS.
 
 Usage
 =====
-
 1. Make sure you have jQuery on your page.
 2. Include Animative on your page (or activate the Wordpress plugin).
 3. Create a HTML list with class="animative" and add any number of items.
@@ -42,7 +41,7 @@ To apply an option, specify it as a data- attribute. For example:
 
 interval
 --------
-The interval between slidse in milliseconds.
+The interval between slides in milliseconds.
 
 Default:
 
