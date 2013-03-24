@@ -7,8 +7,9 @@ but wanted to include text or annotations? Animative is probably what
 you're looking for.
 
 While this uses jQuery, it's not a jQuery plugin since it runs on page
-load and unobtrusively converts all animative elements into slideshows
-without any custom code or initialisation.
+load and [unobtrusively](https://en.wikipedia.org/wiki/Unobtrusive_JavaScript)
+converts all animative elements into slideshows without any custom code
+or initialisation.
 
 You can use data parameters to specify additional options, and CSS to
 style your elements. There's no code involved.
@@ -68,3 +69,16 @@ Options are:
 Default:
 
     fade
+
+CSS Animation
+=============
+It's possible to use CSS animation in conjunction with Animative frames.
+
+Animative uses the following classes:
+
+* animating (Applied to the parent during frame transitions.
+* active (Applied to the frame when it is visible, after it finishes animating.)
+
+You can use these classes to trigger
+[CSS animations](https://developer.mozilla.org/en-US/docs/CSS/Tutorials/Using_CSS_animations)
+during or after a frame has loaded.
