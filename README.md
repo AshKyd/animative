@@ -6,20 +6,24 @@ Have you ever wanted to add a GIF to your post to illustrate a point,
 but wanted to include text or annotations? Animative is probably what
 you're looking for.
 
-This isn't a jQuery plugin, it runs on page load and unobtrusively
-converts all animative elements into slideshows. You can use data
-parameters to specify additional options, and CSS to style your
-elements. There's no code involved.
+While this uses jQuery, it's not a jQuery plugin since it runs on page
+load and unobtrusively converts all animative elements into slideshows
+without any custom code or initialisation.
+
+You can use data parameters to specify additional options, and CSS to
+style your elements. There's no code involved.
 
 Animative is best utilised if you're at least a little familiar with
 CSS.
 
 Usage
 =====
-1. Include the Javascript on your page (or activate the Wordpress plugin).
-2. Create a HTML list with class="animative" and add any number of items.
-3. Specify a width and height on your list with style="width:300px;height:300px;" for example.
-4. Load your page and see the results.
+
+1. Make sure you have jQuery on your page.
+2. Include Animative on your page (or activate the Wordpress plugin).
+3. Create a HTML list with class="animative" and add any number of items.
+4. Specify a width and height on your list with style="width:300px;height:300px;" for example.
+5. Load your page and see the results.
 
 Animative is best used with a combination of graphics and text, although
 you could use either or both.
