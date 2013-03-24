@@ -15,10 +15,10 @@ CSS.
 
 Usage
 =====
-# Include the Javascript on your page (or activate the Wordpress plugin).
-# Create a HTML list with class="animative" and add any number of items.
-# Specify a width and height on your list with style="width:300px;height:300px;" for example.
-# Load your page and see the results.
+1. Include the Javascript on your page (or activate the Wordpress plugin).
+2. Create a HTML list with class="animative" and add any number of items.
+3. Specify a width and height on your list with style="width:300px;height:300px;" for example.
+4. Load your page and see the results.
 
 Animative is best used with a combination of graphics and text, although
 you could use either or both.
