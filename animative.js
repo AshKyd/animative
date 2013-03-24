@@ -48,17 +48,28 @@
 				callback : function(){}
 			},opts);
 			
+			/*
+			 * Callback function for animate
+			 * Used to remove the animating class before returning to
+			 * the script.
+			 */
+			var callback = function(){
+				$(opts.ele).parent().removeClass('animating');
+				opts.callback();
+			}
+			
+			$(opts.ele).parent().addClass('animating');
 			
 			switch(opts.type){
 				case 'fade':
-					$(opts.ele).fadeIn(opts.duration,opts.callback);
+					$(opts.ele).fadeIn(opts.duration,callback);
 					break;
 				case 'slide' : 
-					$(opts.ele).slideDown(opts.duration,opts.callback);
+					$(opts.ele).slideDown(opts.duration,callback);
 					break;
 				case 'none' : 
 					$(opts.ele).show();
-					opts.callback();
+					callback();
 					break;
 			}
 			
@@ -69,21 +80,24 @@
 			var opts = getOpts(ele,defaultOpts);
 			var slideNum = 0;
 			var lastEle = false;
-			var slides = $(ele)
+			var slides = $(ele).children()
+				.hide()
 				.css({
+					position:'absolute',
+					left:0,
+					top:0,
+					right:0,
+					bottom:0,
+					margin:0
+				}).length;
+					
+			// Don't override an absolutely positioned element.
+			if($(ele).css('position') != 'absolute'){
+				$(ele).css({
 					overflow:'hidden',
 					position:'relative'
 				})
-				.children()
-					.hide()
-					.css({
-						position:'absolute',
-						left:0,
-						top:0,
-						right:0,
-						bottom:0,
-						margin:0
-					}).length;
+			}
 					
 			function nextFrame(){
 				var thisEle = $(ele).children().eq(slideNum);
@@ -94,9 +108,12 @@
 				}
 				
 				if(lastEle){
-					$(lastEle).css('zIndex',0);
+					$(lastEle)
+						.css('zIndex',0)
+						.removeClass('active');
 				}
-				$(thisEle).css('zIndex',1);
+				$(thisEle)
+					.css('zIndex',1);
 				
 				animate({
 					ele : thisEle,
@@ -104,6 +121,7 @@
 					type : thisOpts['animation'],
 					callback : function(){
 						$(lastEle).hide();
+						$(thisEle).addClass('active');
 						lastEle = thisEle;
 						
 						slideNum = slideNum == slides-1 ? 0 : slideNum+1;
