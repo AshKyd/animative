@@ -55,6 +55,7 @@ The type of animation to perform between frames.
 Options are:
 * fade (default)
 * slide (slides down over the previous slide.
+* none (No transition, a clean cut over)
 
 Default:
 

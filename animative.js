@@ -56,6 +56,10 @@
 				case 'slide' : 
 					$(opts.ele).slideDown(opts.duration,opts.callback);
 					break;
+				case 'none' : 
+					$(opts.ele).show();
+					opts.callback();
+					break;
 			}
 			
 		}
